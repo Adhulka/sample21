@@ -17,13 +17,23 @@ void main() {
   // } else {
   //   print("$temp is not palindrome");
   // }
-  print("enter a number");
-  String? data = stdin.readLineSync();
-  String? rev1 = data?.split("").reversed.join();
-  print(rev1);
-  if (data == rev1) {
-    print("$data is palindrome");
-  } else {
-    print("$data is not palindrome");
+  // print("enter a number");
+  // String? data = stdin.readLineSync();
+  // String? rev1 = data?.split("").reversed.join();
+  // print(rev1);
+  // if (data == rev1) {
+  //   print("$data is palindrome");
+  // } else {
+  //   print("$data is not palindrome");
+  // }
+
+  print('enter n');
+  int n = int.parse(stdin.readLineSync()!);
+
+  int result = 1;
+  for (int i = 1; i <= n; i++) {
+    result *= i;
   }
+  print("factorial of $n");
+  print("$result");
 }
