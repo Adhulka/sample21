@@ -1,34 +1,20 @@
+import 'dart:collection';
+
 void main() {
-  //literal way
+  // var m1 = Map();
+  // Map<String, dynamic> m2 = {"keys": 1, "keys2": 2, "keys3": 3};
+  // var m3 = Map.fromEntries(m2.entries);
+  // var l1 = ["1", "2", "3"];
+  // var s = {10, 23, 45, 66, 65};
+  // var m4 = Map.fromIterable(l1);
+  // print(m4);
+  // var m5 = Map.fromIterables(l1, s);
+  // print(m5);
 
-  Map m1 = Map();
-  m1["keys"] = 100;
-  m1["name"] = "anu";
-  Map<String, dynamic> m2 = {"name": "anu", "age": 27, "cgpa": 7.8};
-  print(m1);
-
-  Set l1 = {1, 2, 3, 4};
-  var m3 = Map.fromIterable(l1);
-  print(m3);
-  print(m3.keys);
-  print(m2.values);
-
-  List<String> l2 = ["one", "two", "three", "four"];
-
-  Map<String, dynamic> m4 = Map.fromIterables(l2, l1);
-  print(m4);
-
-  Map m5 = Map.fromEntries(m4.entries);
-  print(m5);
-
-  print(m5.containsValue(3));
-  print(m5.containsKey("helo"));
-
-  m5.forEach((key, value) {
-    print("$key:$value");
-  });
-
-  for (var data in m5.keys) {
-    print("$data:${m5[data]}");
-  }
+  Queue<int> q2 = Queue();
+  q2.addAll([1, 2, 3, 4]);
+  q2.addLast(10);
+  q2.add(20);
+  q2.addFirst(23);
+  print(q2);
 }
