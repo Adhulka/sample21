@@ -8,7 +8,7 @@ class parent {
 }
 
 //single inheritance keyword=extends
-class child extends parent {
+class child {
   String cname = "arun";
   int cage = 6;
 
@@ -26,8 +26,8 @@ void main() {
   pobj.job("Engineer", 100000);
 
   child obj = child();
-  print("parent name=${obj.name}");
-  obj.job("engineer", 1000000);
+  print("parent name=${obj.cname}");
+
   print("child name=${obj.cname}");
   print("child age=${obj.cage}");
   obj.Std(1, 7);
