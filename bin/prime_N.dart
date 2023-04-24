@@ -1,31 +1,47 @@
-// void main() {
-//   int i, m = 0, flag = 0;
-//   int num = 11;
+class Person {
+  String name;
+  int age;
+  String gender;
 
-//   m = num ~/ 2;
+  Person(this.name, this.age, this.gender);
 
-//   for (i = 2; i <= m; i++) {
-//     if (num % i == 0) {
-//       print('$num is not a prime number');
-//       flag = 1;
-//       break;
-//     }
-//   }
+  void introduce() {
+    print(" my name is $name. \n I am $age years old \n identify as $gender.");
+  }
+}
 
-//   if (flag == 0) {
-//     print('$num is prime number');
-//   }
-// }
+class Student extends Person {
+  String major;
 
-// void main() {
-//   int n1 = 0, n2 = 1, n3;
-//   print(n1);
-//   print(n2);
+  Student(String name, int age, String gender, this.major)
+      : super(name, age, gender);
 
-//   for (int i = 2; i <= 15; i++) {
-//     n3 = n1 + n2;
-//     print('$n3');
-//     n1 = n2;
-//     n2 = n3;g
-//   }
-// }
+  @override
+  void introduce() {
+    super.introduce();
+    print("I am studying $major.");
+  }
+}
+
+class Employee extends Person {
+  String company;
+  String jobTitle;
+
+  Employee(String name, int age, String gender, this.company, this.jobTitle)
+      : super(name, age, gender);
+
+  @override
+  void introduce() {
+    super.introduce();
+    print("I work at $company as a $jobTitle.");
+  }
+}
+
+void main() {
+  Student myStudent = Student("adhul", 23, "male", "BCA");
+  myStudent.introduce();
+
+  Employee myEmployee =
+      Employee("Ram", 23, "female", "Yellow Inc", "Flutter developer");
+  myEmployee.introduce();
+}
